@@ -13,6 +13,17 @@ installed, for the `realpath` utility.
 These are POSIX shell scripts, so they need a Unix shell. On Windows, use Git
 for Windows (Git Bash) or WSL. They will not run in native PowerShell.
 
+## From a clone
+
+    $ git clone https://github.com/nvie/git-toolbelt.git
+    $ cd git-toolbelt
+    $ make link
+
+This symlinks every command into `~/.local/bin` (or `~/bin`, whichever is
+already on your `PATH`), so edits in the clone take effect immediately. Nothing
+is copied, so the links break if you move or delete the clone. `make unlink`
+removes them again.
+
 # git-toolbelt
 
 Helper tools to make everyday life with Git much easier. Commands marked with
